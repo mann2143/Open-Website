@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Browser</title>
+</head>
+<body>
+    <script>
+        function yes(){
+            var con = confirm("You chose to continue....Let's begin")
+
+            if(con==true){
+                var prom = prompt("Enter the name of website you wish to open","website name")
+
+                if(prom==false){
+                    alert("Please enter a valid website  name")
+                }
+                if(prom==null || prom==""){
+                    alert("You chose not to enter website name. See you again soon...")
+                }
+                else{
+                    alert(`Opening ${prom}`)
+                    window.open(`https://www.bing.com/search?q=${prom}`)
+
+                }
+            }
+            if(con==false){
+                alert("See you again soon")
+            }
+        }
+        function no(){
+            alert("Let's try this some other time")
+        }
+    </script>
+
+
+
+    <h2 style="text-align: center;">Open any web page on the browser</h2>
+    <h3>Do you wish to continue?</h3>
+    <pre>
+        <button onclick="yes()" title="yes">YES</button>  <button onclick="no()" title="no">NO</button>
+    </pre>
+</body>
+</html>
